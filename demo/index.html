@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      background: #fafafa;
+    }
+  </style>
+  
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../dvej-template.js';
+
+    render(
+      html`
+        <dvej-template variant="complete">
+          <h4 slot="notification" style="text-align:center; ">Aqui va un anuncio</h4>
+          <p slot="header">El header esta en su lugar</p>
+          <p slot="side">El side esta en su lugar</p>
+          <div style = "background: red; padding: 70px;"slot="over">El over jala</div>
+        </dvej-template>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
